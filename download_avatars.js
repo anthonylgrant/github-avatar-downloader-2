@@ -27,6 +27,8 @@ getRepoContributors("jquery", "jquery", function(err, result){
 
 request(options, function(err, response, body) {
   if (err) throw err;
-  console.log("Body:",body);
+  body.forEach((obj) => {
+    console.log(obj.avatar_url);
+  })
   console.log('Response Status Code:', response.statusCode);
 });
